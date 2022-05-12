@@ -178,26 +178,29 @@ async function spellingWord() {
     window.speechSynthesis.cancel();
     let word_spelling = '';
     let word_array = Array.from(word_practice);
-    msg.rate = 0.5
+    msg.rate = 1;
     
     
     for(let i=0;i<word_practice.length;i++) {
         word_spelling += word_array[i]+'  ';
-        await sleep(700);   
+        await sleep(2000);   
         //console.log('letter: '+word_array[i]);    
-        await spellingSpeech(word_array[i])
+         spellingSpeech(word_array[i])
     }
-    console.log('Word spelling: '+word_spelling);
+    //console.log('Word spelling: '+word_spelling);
+    await sleep(2000);  
+    window.speechSynthesis.cancel();
+    msg.text = word_practice;
     
-    
+    window.speechSynthesis.speak(msg);
 }
 
- async function spellingSpeech(wordPiece) {
+  function spellingSpeech(wordPiece) {
     window.speechSynthesis.cancel();
-    await sleep(800);   
+    //await sleep(800);   
     msg.text = wordPiece;
     window.speechSynthesis.speak(msg);
-    console.log('diciendo: '+wordPiece);
+    //console.log('diciendo: '+wordPiece);
 }
 
 function spellingWordBKP() {

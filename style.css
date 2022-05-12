@@ -1,0 +1,39 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+h1 {
+font-size: 14rem;
+}
+
+h2 {
+    font-size: 8rem;
+}
+
+nav button {
+    height: 5rem;
+    min-width: 9rem;
+
+}
+
+button svg {
+    height: 4rem;
+}
+
+#control button {
+    height: 5rem;
+    min-width: 9rem;
+}
+
+#control {
+    display: flex;
+    margin-top: 20rem;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
